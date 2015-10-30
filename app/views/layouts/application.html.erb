@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <title>osmsphotography</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <%= stylesheet_link_tag    "aplication" %>
+    <%= stylesheet_link_tag    "bootstrap" %>
+    <%= stylesheet_link_tag    "bootstrap.min" %>
+    <%= stylesheet_link_tag    "font-awesome" %>
+    <%= stylesheet_link_tag    "simple-line-icons" %>
+    <%= stylesheet_link_tag    "style" %>
+      <%= stylesheet_link_tag    "animate" %>
+
+    <%= yield :css_personalizado %>
+    
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+    
+   <!--   < %= render "application/header" %> -->
+        <%= yield %>
+    </header>
+  
+    <%= javascript_include_tag 'jquery-1.11.1.min' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'bootstrap.min' %>
+      
+      <%= javascript_include_tag 'custom' %>
+      <%= javascript_include_tag 'imagesloaded.pkgd' %>
+      <%= javascript_include_tag 'jquery.cbpQTRotator' %>
+      <%= javascript_include_tag 'jquery.easypiechart' %>
+       <%= javascript_include_tag 'jquery.parallax-1.1.3' %>
+       <%= javascript_include_tag 'jquery.sticky' %>
+       <%= javascript_include_tag 'modernizr.custom' %>
+      <%= javascript_include_tag 'waypoints.min' %>
+      <%= javascript_include_tag 'smoothscroll' %>
+      <%= javascript_include_tag 'wow.min' %>
+
+      
+    <%= yield :js_personalizado %>
+  </body>
+</html>
